@@ -1,0 +1,219 @@
+/*--PC,Phone both --*/
+
+* {
+  box-sizing: border-box;
+}
+body {
+  color: #000000;
+  padding: 0px;
+  margin: 0px;
+  font-family: "Noto Sans Japanese", sans-serif;
+  background-color: #ffffff;
+  font-size: 18px;
+}
+a {
+  color: #000000;
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
+/*--PC style--*/
+
+/*--HEADER--*/
+
+.header {
+  max-width: 960px;
+  display: flex;
+  justify-content: space-between;
+  color: black;
+  margin: 20px auto;
+  flex-wrap: wrap;
+}
+
+.header h1 {
+  font-size: 34px;
+  border: 1px;
+  border-style: solid;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+#self-nav {
+  font-size: 21px;
+  left: 0;
+  margin: 32px 4px 4px 8px;
+  display: flex;
+  text-align: center;
+}
+#self-nav a {
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0 0 0 30px;
+  font-size: 34px;
+}
+
+/*--MAIN VISUAL--*/
+#main-visual img {
+  width: 100%;
+  margin: 0 auto;
+}
+/*--ABOUT --*/
+#about {
+  max-width: 960px;
+
+  margin: 20px auto;
+}
+h2 {
+  font-size: 28px;
+  text-align: center;
+  padding: 60px 0 40px 0;
+  font-weight: bold;
+  margin: 0;
+}
+#about-inner {
+  display: flex;
+  justify-content: center;
+  margin-top: 73px;
+  flex-wrap: wrap;
+}
+.face {
+  border-radius: 50%;
+  width: 280px;
+  height: 280px;
+}
+.introduction {
+  display: flex;
+  flex-direction: column;
+  margin-left: 121px;
+}
+.introduction > h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0 4px 0;
+}
+.introduction > li {
+  font-size: 18px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+/*--WORKS--*/
+#works {
+  margin: 0px auto;
+  max-width: 960px;
+}
+#works-flex {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  max-width: 960px;
+}
+.about-work {
+  width: 25%;
+  margin: 0 0.5rem;
+  flex-wrap: wrap;
+}
+
+/*--FOOTER--*/
+footer p {
+  text-align: center;
+  margin: 20px 40px 20px 40px;
+}
+/*==スマホ版==*/
+@media screen and (max-width: 767px) {
+  .header h1 {
+    font-size: 28px;
+  }
+  #self-nav {
+    font-size: 21px;
+  }
+  #about h2 {
+    font-size: 28px;
+    text-align: center;
+    padding: 20px 0 10px;
+  }
+
+  #about {
+    width: 100%;
+    height: auto;
+  }
+  .introduction {
+    margin-bottom: 60px;
+  }
+  #works-flex {
+    display: block;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  .about-work {
+    width: 100%;
+    margin: 40px auto;
+  }
+  footer {
+    text-align: center;
+    margin: 40px auto;
+  }
+}
+/*===jQuery assignment===*/
+
+/*--TOP BUTTON--*/
+#page-top {
+  position: fixed;
+  bottom: 38px;
+  right: 20px;
+  background-color: black;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+
+  text-decoration: none;
+  display: none;
+  padding: 30px 24px;
+}
+/*--fade in when Scrolled--*/
+section {
+  opacity: 0;
+  transition: 3s;
+}
+.fade-in {
+  opacity: 1;
+}
+/* work-photoの上でカーソルをポインターに変える*/
+
+.about-work img {
+  cursor: pointer;
+}
+
+/* --モーダル--*/
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+.big-img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 80%;
+  max-width: 800px;
+  margin: auto;
+}
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: pink;
+  font-size: 40px;
+  text-decoration: none;
+  cursor: pointer;
+}

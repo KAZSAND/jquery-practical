@@ -30,16 +30,15 @@ img {
   justify-content: space-between;
   color: black;
   margin: 20px auto;
-  flex-wrap: wrap;
 }
 
 .header h1 {
   font-size: 34px;
   border: 1px;
   border-style: solid;
-  display: flex;
+
   align-items: center;
-  padding: 0 20px;
+  padding: 0, 20px;
 }
 
 #self-nav {
@@ -51,7 +50,7 @@ img {
 #self-nav a {
   font-weight: bold;
   text-decoration: none;
-  margin: 0 0 0 30px;
+  margin: 0 0 0 1.5rem;
   font-size: 29px;
 }
 
@@ -71,13 +70,14 @@ h2 {
   text-align: center;
   padding: 60px 0 40px 0;
   font-weight: bold;
-  margin: 0;
+  margin-bottom: 2rem;
 }
 #about-inner {
-  display: flex;
   justify-content: center;
-  margin-top: 73px;
+
   flex-wrap: wrap;
+  display: flex;
+  margin: 20px, auto;
 }
 .face {
   border-radius: 50%;
@@ -85,9 +85,11 @@ h2 {
   height: 280px;
 }
 .introduction {
-  display: flex;
   flex-direction: column;
-  margin-left: 121px;
+  align-items: center;
+  padding: 10px;
+
+  flex-wrap: wrap;
 }
 .introduction > h3 {
   font-size: 24px;
@@ -125,9 +127,19 @@ footer p {
 /*==スマホ版==*/
 @media screen and (max-width: 767px) {
   .header h1 {
+    padding: 0;
     font-size: 28px;
+    margin-left: 1rem;
   }
   #self-nav {
+    align-items: center;
+    padding: 0;
+
+    margin-right: 1rem;
+  }
+  #self-nav a {
+    margin: 0 0 0 1rem;
+
     font-size: 21px;
   }
   #about h2 {
@@ -135,13 +147,19 @@ footer p {
     text-align: center;
     padding: 20px 0 10px;
   }
+  #about h3 {
+    font-size: 24px;
+    margin-left: 1rem;
+  }
 
   #about {
     width: 100%;
     height: auto;
   }
   .introduction {
-    margin-bottom: 60px;
+    margin: 0, auto, 60px, auto;
+
+    width: 100%;
   }
   #works-flex {
     display: block;
@@ -150,7 +168,7 @@ footer p {
   }
   .about-work {
     width: 100%;
-    margin: 40px auto;
+    margin: 10px, 10px;
   }
   footer {
     text-align: center;
